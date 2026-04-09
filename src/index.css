@@ -3,9 +3,9 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-red: #B91C1C;
-  --color-brand-gold: #D4AF37;
-  --color-brand-gold-dark: #B8860B;
+  --color-brand-primary: #0EA5E9;
+  --color-brand-secondary: #0A0A0A;
+  --color-brand-secondary-light: #171717;
 }
 
 @layer base {

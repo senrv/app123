@@ -99,8 +99,8 @@ export default function Dashboard() {
             <h3 className="text-xl font-bold text-slate-900 mb-6">Informasi Penting</h3>
             <div className="space-y-6">
               <div className="flex gap-5 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-                <div className="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-6 h-6 text-brand-red" />
+                <div className="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Kerahasiaan Terjamin</h4>
@@ -110,8 +110,8 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="flex gap-5 p-5 bg-slate-50 rounded-2xl border border-slate-100">
-                <div className="w-12 h-12 bg-brand-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Users className="w-6 h-6 text-brand-gold-dark" />
+                <div className="w-12 h-12 bg-brand-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users className="w-6 h-6 text-brand-secondary" />
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Dukungan Konseling</h4>
@@ -125,21 +125,21 @@ export default function Dashboard() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-brand-red p-8 rounded-3xl text-white shadow-xl shadow-red-200/50 relative overflow-hidden group">
+          <div className="bg-brand-primary p-8 rounded-3xl text-white shadow-xl shadow-sky-200/50 relative overflow-hidden group">
             <div className="relative z-10">
               <h3 className="text-2xl font-bold mb-3">Butuh Bantuan Segera?</h3>
-              <p className="text-red-100 mb-6 font-medium">Jangan ragu untuk melaporkan tindakan yang merugikan diri sendiri maupun orang lain.</p>
+              <p className="text-sky-100 mb-6 font-medium">Jangan ragu untuk melaporkan tindakan yang merugikan diri sendiri maupun orang lain.</p>
               {profile?.role === 'siswa' ? (
                 <Link 
                   to="/app/create-report" 
-                  className="inline-flex items-center gap-2 bg-white text-brand-red px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-all"
+                  className="inline-flex items-center gap-2 bg-white text-brand-primary px-6 py-3 rounded-xl font-bold hover:bg-sky-50 transition-all"
                 >
                   Buat Laporan <ArrowRight className="w-5 h-5" />
                 </Link>
               ) : (
                 <Link 
                   to="/app/reports" 
-                  className="inline-flex items-center gap-2 bg-white text-brand-red px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-all"
+                  className="inline-flex items-center gap-2 bg-white text-brand-primary px-6 py-3 rounded-xl font-bold hover:bg-sky-50 transition-all"
                 >
                   Lihat Laporan <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -161,7 +161,7 @@ export default function Dashboard() {
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-500 font-medium">Hotline 24/7</span>
-                <span className="font-bold text-brand-red">0812-3456-7890</span>
+                <span className="font-bold text-brand-primary">0812-3456-7890</span>
               </div>
             </div>
           </div>

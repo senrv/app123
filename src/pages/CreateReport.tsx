@@ -96,7 +96,7 @@ export default function CreateReport() {
           {/* Victim Name */}
           <div className="space-y-2">
             <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
-              <User className="w-4 h-4 text-brand-red" /> Nama Korban
+              <User className="w-4 h-4 text-brand-primary" /> Nama Korban
             </label>
             <input
               type="text"
@@ -104,28 +104,28 @@ export default function CreateReport() {
               value={formData.victim_name}
               onChange={(e) => setFormData({ ...formData, victim_name: e.target.value })}
               placeholder="Siapa yang menjadi korban?"
-              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all shadow-sm"
+              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all shadow-sm"
             />
           </div>
 
           {/* Incident Date */}
           <div className="space-y-2">
             <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-brand-red" /> Tanggal Kejadian
+              <Calendar className="w-4 h-4 text-brand-primary" /> Tanggal Kejadian
             </label>
             <input
               type="date"
               required
               value={formData.incident_date}
               onChange={(e) => setFormData({ ...formData, incident_date: e.target.value })}
-              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all shadow-sm"
+              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all shadow-sm"
             />
           </div>
 
           {/* Location */}
           <div className="space-y-2 md:col-span-2">
             <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-brand-red" /> Lokasi Kejadian
+              <MapPin className="w-4 h-4 text-brand-primary" /> Lokasi Kejadian
             </label>
             <input
               type="text"
@@ -133,21 +133,21 @@ export default function CreateReport() {
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
               placeholder="Misal: Kantin, Lapangan Basket, Kelas X RPL 1"
-              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all shadow-sm"
+              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all shadow-sm"
             />
           </div>
 
           {/* Description */}
           <div className="space-y-2 md:col-span-2">
             <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
-              <FileText className="w-4 h-4 text-brand-red" /> Kronologi Kejadian
+              <FileText className="w-4 h-4 text-brand-primary" /> Kronologi Kejadian
             </label>
             <textarea
               required
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               placeholder="Ceritakan apa yang terjadi secara detail..."
-              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all shadow-sm min-h-[200px] leading-relaxed"
+              className="w-full px-5 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all shadow-sm min-h-[200px] leading-relaxed"
             />
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function CreateReport() {
           <button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-brand-red text-white py-4 rounded-2xl font-bold text-lg hover:bg-red-800 transition-all shadow-lg shadow-red-200 disabled:opacity-70 flex items-center justify-center gap-2"
+            className="flex-1 bg-brand-primary text-white py-4 rounded-2xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg shadow-sky-200 disabled:opacity-70 flex items-center justify-center gap-2"
           >
             {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : (
               <>
@@ -174,7 +174,7 @@ export default function CreateReport() {
         </div>
 
         <div className="bg-amber-50 p-6 rounded-3xl border border-amber-100 flex gap-4">
-          <Shield className="w-6 h-6 text-brand-gold-dark flex-shrink-0" />
+          <Shield className="w-6 h-6 text-brand-secondary flex-shrink-0" />
           <p className="text-sm text-amber-800 leading-relaxed">
             <span className="font-bold">Penting:</span> Laporan palsu dapat dikenakan sanksi tata tertib sekolah. Pastikan Anda memberikan informasi yang akurat untuk membantu proses penanganan.
           </p>

@@ -68,15 +68,15 @@ export default function RegisterPage() {
         className="max-w-xl w-full bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 md:p-10 border border-slate-100"
       >
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-red-50 rounded-2xl mb-4">
-            <Shield className="w-8 h-8 text-brand-red" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-sky-50 rounded-2xl mb-4">
+            <Shield className="w-8 h-8 text-brand-primary" />
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900">Daftar Akun Baru</h2>
           <p className="text-slate-500 mt-2">Bergabunglah untuk menciptakan sekolah yang aman</p>
         </div>
 
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-100 rounded-xl flex items-start gap-3 text-red-700 text-sm">
+          <div className="mb-6 p-4 bg-sky-50 border border-sky-100 rounded-xl flex items-start gap-3 text-sky-700 text-sm">
             <AlertCircle className="w-5 h-5 flex-shrink-0" />
             <span>{error}</span>
           </div>
@@ -93,7 +93,7 @@ export default function RegisterPage() {
                   required
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
                   placeholder="Nama Lengkap Anda"
                 />
               </div>
@@ -108,7 +108,7 @@ export default function RegisterPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
                   placeholder="nama@sekolah.sch.id"
                 />
               </div>
@@ -123,7 +123,7 @@ export default function RegisterPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
                   placeholder="Minimal 6 karakter"
                   minLength={6}
                 />
@@ -138,7 +138,7 @@ export default function RegisterPage() {
                   type="text"
                   value={nis}
                   onChange={(e) => setNis(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
                   placeholder="Nomor Induk Siswa"
                 />
               </div>
@@ -152,7 +152,7 @@ export default function RegisterPage() {
                   type="text"
                   value={kelas}
                   onChange={(e) => setKelas(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all"
                   placeholder="Contoh: X RPL 1"
                 />
               </div>
@@ -162,7 +162,7 @@ export default function RegisterPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-brand-red text-white py-4 rounded-xl font-bold text-lg hover:bg-red-800 transition-all shadow-lg shadow-red-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full bg-brand-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-sky-600 transition-all shadow-lg shadow-sky-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Daftar Sekarang'}
           </button>
@@ -171,7 +171,7 @@ export default function RegisterPage() {
         <div className="mt-8 pt-8 border-t border-slate-100 text-center">
           <p className="text-sm text-slate-500">
             Sudah punya akun?{' '}
-            <Link to="/login" className="font-bold text-brand-red hover:underline">
+            <Link to="/login" className="font-bold text-brand-primary hover:underline">
               Masuk di sini
             </Link>
           </p>

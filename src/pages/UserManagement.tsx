@@ -166,7 +166,7 @@ export default function UserManagement() {
         </div>
         <button 
           onClick={() => handleOpenModal()}
-          className="bg-brand-red text-white px-6 py-3 rounded-2xl font-bold flex items-center gap-2 hover:bg-red-800 transition-all shadow-lg shadow-red-200"
+          className="bg-brand-primary text-white px-6 py-3 rounded-2xl font-bold flex items-center gap-2 hover:bg-sky-600 transition-all shadow-lg shadow-sky-200"
         >
           <UserPlus className="w-5 h-5" /> Tambah User
         </button>
@@ -174,7 +174,7 @@ export default function UserManagement() {
 
       {!supabaseAdmin && (
         <div className="bg-amber-50 border border-amber-200 p-6 rounded-3xl flex gap-4 items-start">
-          <ShieldAlert className="w-6 h-6 text-brand-gold-dark flex-shrink-0 mt-1" />
+          <ShieldAlert className="w-6 h-6 text-brand-secondary flex-shrink-0 mt-1" />
           <div>
             <h4 className="font-bold text-amber-900 mb-1">Peringatan Konfigurasi</h4>
             <p className="text-sm text-amber-800 leading-relaxed">
@@ -223,7 +223,7 @@ export default function UserManagement() {
                   <tr key={user.id} className="hover:bg-slate-50/50 transition-colors group">
                     <td className="px-8 py-5">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center font-bold text-slate-400 group-hover:bg-red-50 group-hover:text-brand-red transition-all">
+                        <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center font-bold text-slate-400 group-hover:bg-sky-50 group-hover:text-brand-primary transition-all">
                           {user.full_name.charAt(0)}
                         </div>
                         <span className="font-bold text-slate-900">{user.full_name}</span>
@@ -304,7 +304,7 @@ export default function UserManagement() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all"
                         placeholder="email@sekolah.sch.id"
                       />
                     </div>
@@ -315,7 +315,7 @@ export default function UserManagement() {
                         required
                         value={formData.password}
                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all"
                         placeholder="••••••••"
                       />
                     </div>
@@ -328,7 +328,7 @@ export default function UserManagement() {
                     required
                     value={formData.full_name}
                     onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all"
                     placeholder="Nama Lengkap"
                   />
                 </div>
@@ -337,7 +337,7 @@ export default function UserManagement() {
                   <select
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value as UserRole })}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all"
                   >
                     <option value="siswa">Siswa</option>
                     <option value="guru">Guru</option>
@@ -353,7 +353,7 @@ export default function UserManagement() {
                         required
                         value={formData.nis}
                         onChange={(e) => setFormData({ ...formData, nis: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all"
                         placeholder="Nomor Induk Siswa"
                       />
                     </div>
@@ -364,7 +364,7 @@ export default function UserManagement() {
                         required
                         value={formData.kelas}
                         onChange={(e) => setFormData({ ...formData, kelas: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-red/10 focus:border-brand-red transition-all"
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-primary/10 focus:border-brand-primary transition-all"
                         placeholder="Misal: X RPL 1"
                       />
                     </div>
@@ -376,7 +376,7 @@ export default function UserManagement() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="flex-1 bg-brand-red text-white py-4 rounded-2xl font-bold hover:bg-red-800 transition-all shadow-lg shadow-red-200 disabled:opacity-70 flex items-center justify-center gap-2"
+                  className="flex-1 bg-brand-primary text-white py-4 rounded-2xl font-bold hover:bg-sky-600 transition-all shadow-lg shadow-sky-200 disabled:opacity-70 flex items-center justify-center gap-2"
                 >
                   {submitting ? <Loader2 className="w-5 h-5 animate-spin" /> : (
                     <>

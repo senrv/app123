@@ -53,7 +53,7 @@ export default function DashboardLayout() {
       {/* Sidebar Desktop */}
       <aside className="hidden lg:flex flex-col w-72 bg-white border-r border-slate-200 fixed h-full z-40">
         <div className="p-8 flex items-center gap-3 border-b border-slate-100">
-          <Shield className="w-8 h-8 text-brand-red" />
+          <Shield className="w-8 h-8 text-brand-primary" />
           <span className="font-bold text-xl tracking-tight text-slate-900">SMK Prima</span>
         </div>
         
@@ -66,7 +66,7 @@ export default function DashboardLayout() {
               className={({ isActive }) => cn(
                 "flex items-center gap-4 px-4 py-3.5 rounded-xl font-semibold transition-all group",
                 isActive 
-                  ? "bg-red-50 text-brand-red shadow-sm shadow-red-100/50" 
+                  ? "bg-sky-50 text-brand-primary shadow-sm shadow-sky-100/50" 
                   : "text-slate-500 hover:bg-slate-50 hover:text-slate-900"
               )}
             >
@@ -78,7 +78,7 @@ export default function DashboardLayout() {
 
         <div className="p-6 border-t border-slate-100">
           <div className="bg-slate-50 rounded-2xl p-4 flex items-center gap-3">
-            <div className="w-10 h-10 bg-brand-gold rounded-full flex items-center justify-center text-white font-bold">
+            <div className="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center text-white font-bold">
               {profile?.full_name.charAt(0)}
             </div>
             <div className="flex-1 min-w-0">
@@ -104,7 +104,7 @@ export default function DashboardLayout() {
       )}>
         <div className="p-8 flex items-center justify-between border-b border-slate-100">
           <div className="flex items-center gap-3">
-            <Shield className="w-8 h-8 text-brand-red" />
+            <Shield className="w-8 h-8 text-brand-primary" />
             <span className="font-bold text-xl tracking-tight text-slate-900">SMK Prima</span>
           </div>
           <button onClick={() => setIsSidebarOpen(false)} className="p-2 text-slate-500">
@@ -121,7 +121,7 @@ export default function DashboardLayout() {
               className={({ isActive }) => cn(
                 "flex items-center gap-4 px-4 py-3.5 rounded-xl font-semibold transition-all",
                 isActive 
-                  ? "bg-red-50 text-brand-red shadow-sm shadow-red-100/50" 
+                  ? "bg-sky-50 text-brand-primary shadow-sm shadow-sky-100/50" 
                   : "text-slate-500 hover:bg-slate-50 hover:text-slate-900"
               )}
             >
@@ -151,7 +151,7 @@ export default function DashboardLayout() {
 
           <button 
             onClick={handleSignOut}
-            className="flex items-center gap-2 px-5 py-2.5 bg-slate-50 text-slate-700 font-bold rounded-xl hover:bg-red-50 hover:text-brand-red transition-all border border-slate-200 hover:border-red-100"
+            className="flex items-center gap-2 px-5 py-2.5 bg-slate-50 text-slate-700 font-bold rounded-xl hover:bg-sky-50 hover:text-brand-primary transition-all border border-slate-200 hover:border-sky-100"
           >
             <LogOut className="w-5 h-5" />
             <span className="hidden sm:inline">Keluar</span>
